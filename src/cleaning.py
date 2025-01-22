@@ -71,4 +71,4 @@ def get_types_col(df):
 
     df.replace({col: {'nan': np.nan} for col in df.columns}, inplace=True)
 
-    return df, (bools, quals, nums, times)
+    return df, (bools, quals, nums[1:], times) # On retire "ID" de nums
